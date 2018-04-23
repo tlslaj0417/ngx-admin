@@ -1,10 +1,10 @@
 {
-  "name": "ngx-admin",
-  "version": "2.1.0",
+  "name": "cloud-portal",
+  "version": "0.0.1",
   "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/akveo/ngx-admin.git"
+    "url": "git+https://github.com/tlslaj0417/ngx-admin.git"
   },
   "bugs": {
     "url": "https://github.com/akveo/ngx-admin/issues"
@@ -38,10 +38,10 @@
     "@angular/platform-browser": "~5.2.6",
     "@angular/platform-browser-dynamic": "~5.2.6",
     "@angular/router": "~5.2.6",
-    "@nebular/auth": "2.0.0-rc.6",
-    "@nebular/theme": "2.0.0-rc.6",
     "@nebular/security": "2.0.0-rc.6",
     "@ng-bootstrap/ng-bootstrap": "1.0.0",
+    "@tlslaj0417/auth": "0.0.2",
+    "@tlslaj0417/theme": "0.0.2",
     "bootstrap": "4.0.0",
     "classlist.js": "1.1.20150312",
     "core-js": "2.5.1",

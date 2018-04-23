@@ -17,7 +17,7 @@ import {
   NbCheckboxModule,
   NbPopoverModule,
   NbContextMenuModule,
-} from '@nebular/theme';
+} from '@tlslaj0417/theme';
 
 import { NbSecurityModule } from '@nebular/security';
 

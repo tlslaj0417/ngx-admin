@@ -6,7 +6,7 @@ import {
   NbMenuService,
   NbSidebarService,
   NbThemeService,
-} from '@nebular/theme';
+} from '@tlslaj0417/theme';
 
 import { StateService } from '../../../@core/data/state.service';
 

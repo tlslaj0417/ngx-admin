@@ -11,6 +11,9 @@
       ],
       "@nebular/*": [
         "../node_modules/@nebular/*"
+      ],
+      "@tlslaj0417/*": [
+        "../node_modules/@nebular/*"
       ]
     }
   },
