@@ -1,43 +1,45 @@
 import { ExtraOptions, RouterModule, Routes } from '@angular/router';
 import { NgModule } from '@angular/core';
 import {
-  NbAuthComponent,
-  NbLoginComponent,
-  NbLogoutComponent,
-  NbRegisterComponent,
-  NbRequestPasswordComponent,
-  NbResetPasswordComponent,
-} from '@tlslaj0417/auth';
+  DHLAuthComponent,
+  DHLLoginComponent,
+  DHLLogoutComponent,
+  DHLRegisterComponent,
+  DHLRequestPasswordComponent,
+  DHLResetPasswordComponent,
+} from './@theme/components/auth';
+import { AuthGuard } from './auth-guard.service';
 
 const routes: Routes = [
-  { path: 'pages', loadChildren: 'app/pages/pages.module#PagesModule' },
+  { path: 'pages',canActivate: [AuthGuard], // here we tell Angular to check the access with our AuthGuard
+   loadChildren: 'app/pages/pages.module#PagesModule' },
   {
     path: 'auth',
-    component: NbAuthComponent,
+    component: DHLAuthComponent,
     children: [
       {
         path: '',
-        component: NbLoginComponent,
+        component: DHLLoginComponent,
       },
       {
         path: 'login',
-        component: NbLoginComponent,
+        component: DHLLoginComponent,
       },
       {
         path: 'register',
-        component: NbRegisterComponent,
+        component: DHLRegisterComponent,
       },
       {
         path: 'logout',
-        component: NbLogoutComponent,
+        component: DHLLogoutComponent,
       },
       {
         path: 'request-password',
-        component: NbRequestPasswordComponent,
+        component: DHLRequestPasswordComponent,
       },
       {
         path: 'reset-password',
-        component: NbResetPasswordComponent,
+        component: DHLResetPasswordComponent,
       },
     ],
   },

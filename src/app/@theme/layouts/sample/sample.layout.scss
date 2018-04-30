@@ -2,6 +2,24 @@
 @import '~bootstrap/scss/mixins/breakpoints';
 @import '~@tlslaj0417/theme/styles/global/bootstrap/breakpoints';
 
+$light-gradient:linear-gradient(to right, #cc0001, #cc0001);
+
+.btn-dhl-red {
+  background-image: $light-gradient;
+  line-height: calc((1rem * 1.25) + 4px);
+  &:hover,
+  .hover {
+    background-image: $light-gradient;
+  };
+  &:focus,
+  .focus {
+    background-image: $light-gradient;
+  };
+  :active {
+    background-image: $light-gradient;
+  }
+}
+
 @include nb-install-component() {
   nb-layout-column.small {
     flex: 0.15 !important;

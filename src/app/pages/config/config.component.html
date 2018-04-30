@@ -1,0 +1,53 @@
+<div class="row">
+    <div class="col-lg-9 center-layout-white">
+        <nb-card>
+            <nb-card-header>
+                <h2 class="title">Add Application</h2>
+            </nb-card-header>
+            <nb-card-body>
+                <div>
+                    <div class="input-group">
+                        <span class="input-group-addon col-sm-3">Name
+                            <i class="ion-android-alert" nbPopover="Application name" nbPopoverMode="hint"></i>
+                        </span>
+                        <input [(ngModel)]="app_name" type="text" class="form-control " />
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon col-sm-3">Description
+                            <i class="ion-android-alert" nbPopover="Optional" nbPopoverMode="hint"></i>
+                        </span>
+                        <textarea  [(ngModel)]="app_desc" class="form-control" rows="3" required></textarea>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon col-sm-3">Status</span>
+                        <input [(ngModel)]="app_status" type="text" class="form-control" placeholder="CREATE" readonly/>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon col-sm-3">Instances
+                            <i class="ion-android-alert" nbPopover="**To fill in what is the min and max instances is allowed for this application" nbPopoverMode="hint"></i>
+                        </span>
+                        <div class="form-control col-lg-9 ">
+                            <div class="col-sm-5 input-group row">
+                                <input [(ngModel)]="app_min_inst" type="number" min="0" max="50" placeholder="Min" class="form-control" />
+                            </div>
+                            <div class="col-sm-5 input-group row">
+                                <input [(ngModel)]="app_max_inst" type="number" min="0" max="50" placeholder="Max" class="form-control" />
+                            </div>
+                        </div>
+                    </div>
+                    <div class="input-group">
+                        <span class="input-group-addon col-sm-3">Cloud Provider</span>
+                        <select [(ngModel)]="app_provider" class="form-control">
+                            <option>VSPHERE</option>
+                            <option>OPENSHIFT</option>
+                        </select>
+                    </div>
+                </div>
+                <div class ="center-align-text">
+                        <button type="submit" (click)="showConfirmModal()" class="btn btn-primary center-layout-white btn-yellow">Submit</button>
+                        <button type="submit" (click)="reset()" class="btn btn-primary center-layout-white btn-red">Reset</button>
+                </div>
+            </nb-card-body>
+        </nb-card>
+    </div>
+</div>

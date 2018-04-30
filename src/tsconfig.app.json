@@ -13,7 +13,7 @@
         "../node_modules/@nebular/*"
       ],
       "@tlslaj0417/*": [
-        "../node_modules/@nebular/*"
+        "../node_modules/@tlslaj0417/*"
       ]
     }
   },

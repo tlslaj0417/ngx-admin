@@ -1,0 +1,14 @@
+#card-item {
+    display: flex;
+        padding: 10px;
+        width:350px; /* or whatever width you want. */
+   max-width:350px; /* or whatever width you want. */
+    }
+
+    
+    #content-gravity {
+        float: right;
+        display: flex;
+        margin-right: 20px;
+        font-weight: bold;
+        }

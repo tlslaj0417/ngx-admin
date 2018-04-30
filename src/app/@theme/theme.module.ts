@@ -2,7 +2,7 @@ import { ModuleWithProviders, NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
-
+import { RouterModule, Routes } from '@angular/router';
 import {
   NbActionsModule,
   NbCardModule,
@@ -38,7 +38,17 @@ import {
 import { DEFAULT_THEME } from './styles/theme.default';
 import { COSMIC_THEME } from './styles/theme.cosmic';
 
-const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule];
+import {
+  DHLAuthBlockComponent,
+  DHLAuthComponent,
+  DHLLoginComponent,
+  DHLLogoutComponent,
+  DHLRegisterComponent,
+  DHLRequestPasswordComponent,
+  DHLResetPasswordComponent,
+} from './components/auth';
+
+const BASE_MODULES = [CommonModule, FormsModule, ReactiveFormsModule,RouterModule];
 
 const NB_MODULES = [
   NbCardModule,
@@ -55,7 +65,17 @@ const NB_MODULES = [
   NbContextMenuModule,
   NgbModule,
   NbSecurityModule, // *nbIsGranted directive
-];
+  ];
+
+  const DHL_AUTH_MODULES = [
+    DHLAuthBlockComponent,
+    DHLAuthComponent,
+  DHLLoginComponent,
+  DHLLogoutComponent,
+  DHLRegisterComponent,
+  DHLRequestPasswordComponent,
+  DHLResetPasswordComponent,
+    ];
 
 const COMPONENTS = [
   ThemeSwitcherComponent,
@@ -89,8 +109,8 @@ const NB_THEME_PROVIDERS = [
 
 @NgModule({
   imports: [...BASE_MODULES, ...NB_MODULES],
-  exports: [...BASE_MODULES, ...NB_MODULES, ...COMPONENTS, ...PIPES],
-  declarations: [...COMPONENTS, ...PIPES],
+  exports: [...BASE_MODULES, ...NB_MODULES, ...COMPONENTS, ...PIPES, ...DHL_AUTH_MODULES],
+  declarations: [...COMPONENTS, ...PIPES, ...DHL_AUTH_MODULES],
 })
 export class ThemeModule {
   static forRoot(): ModuleWithProviders {
